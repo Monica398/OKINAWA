@@ -2,7 +2,7 @@ export function Hero() {
     return (
         <section
             id="inicio"
-            className="mx-auto grid min-h-[650px] max-w-7xl grid-cols-1 items-center gap-12 px-6 py-16 lg:grid-cols-2"
+            className="mx-auto grid min-h-162.5 max-w-7xl grid-cols-1 items-center gap-12 px-6 py-16 lg:grid-cols-2"
         >
             <div>
                 <p className="mb-5 text-xs font-bold tracking-[0.3em] text-red-800">
@@ -35,7 +35,7 @@ export function Hero() {
                 </div>
             </div>
 
-            <div className="flex min-h-[500px] items-center justify-center border border-black/20 bg-[#e8e0d4]">
+            <div className="flex min-h-125items-center justify-center border border-black/20 bg-[#e8e0d4]">
                 <p className="font-serif text-xl text-neutral-500">
                     Aquí irá la imagen principal
                 </p>
