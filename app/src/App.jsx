@@ -1,4 +1,4 @@
-import './App.css'
+/*import './App.css'
 import { Footer } from './components/Footer'
 import { NavBar } from './components/NavBar'
 import { HomePage } from './pages/HomePage'
@@ -15,4 +15,9 @@ export default function App() {
       <Footer />
     </div>
   )
+}*/
+import Login from './pages/login'
+function App(){
+return<Login/>
 }
+export default App
