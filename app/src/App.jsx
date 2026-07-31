@@ -1,6 +1,6 @@
 import { NavBar } from "@/components/NavBar";
-import { HomePage } from "@/pages/HomePage";
 import { Footer } from "@/components/Footer";
+import { Outlet } from "react-router-dom";
 
 export default function App() {
   return (
@@ -8,7 +8,7 @@ export default function App() {
       <NavBar />
 
       <main className="flex-1">
-        <HomePage />
+        <Outlet />
       </main>
 
       <Footer />

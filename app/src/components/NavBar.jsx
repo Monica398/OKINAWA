@@ -1,6 +1,7 @@
 import { Search, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Link } from "react-router-dom";
 
 export function NavBar() {
     return (
@@ -59,7 +60,9 @@ export function NavBar() {
                         variant="ghost"
                         className="rounded-none px-4 font-semibold text-[#222222] hover:bg-transparent hover:text-[#c8655b]"
                     >
-                        Registrarse
+                        <Link to="/login">
+                            Registrarse
+                        </Link>
                     </Button>
                 </div>
 
@@ -78,7 +81,7 @@ export function NavBar() {
                         className="h-10 rounded-none bg-[#171717] px-4 text-sm font-semibold uppercase tracking-wide text-white hover:bg-[#333333]"
                     >
                         Reservar cita
-                        {/*El plus es para que aparezcael + en reservar cita*/ }
+                        {/*El plus es para que aparezcael + en reservar cita*/}
                         <Plus className="h-4 w-4" />
                     </Button>
                 </div>
