@@ -3,6 +3,7 @@ import { Eye, EyeOff, Mail, Lock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Link } from 'react-router-dom'
 
 export default function Login() {
   //muestra y oculta la contraseña con el ojo
@@ -12,7 +13,7 @@ export default function Login() {
     <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 bg-[#F5F1EA]">
 
       {/* lado izquierdo*/}
-      <div className="hidden md:flex flex-col items-center justify-center p-12 border-r border-black/10">
+      <div className="hidden md:flex flex-col items-center justify-center p-3 border-r border-black/10">
         <img
           src="/src/assets/casa.png"
           alt="Okinawa Tattoo Studio"
@@ -25,22 +26,15 @@ export default function Login() {
       </div>
 
       {/* lado derecho */}
-      <div className="flex flex-col justify-center px-8 md:px-20 py-12">
+      <div className="flex flex-col justify-start pt-15 px-8 md:px-20 py-12">
 
-        {/* Header */}
-        <div className="flex justify-between items-center mb-16">
-          <div>
-            <h1 className="font-serif text-2xl font-bold">Okinawa</h1>
-            <p className="text-xs tracking-normal text-neutral-500">TATTOO STUDIO</p>
-          </div>
-        </div>
 
         {/* Titulo */}
         <p className="text-red-600 text-sm font-semibold tracking-wide mb-2">
           Bienvenido de nuevo
         </p>
         <h2 className="font-serif text-5xl mb-2">Inicia sesión</h2>
-        <p className="text-red-600 mb-10">y reserva tu próxima obra de arte.</p>
+        <p className="text-red-600 mb-5 "> reserva tu próxima obra de arte.</p>
 
         {/* formulario*/}
         <form className="space-y-6 max-w-md">
@@ -88,9 +82,14 @@ export default function Login() {
           <Button type="submit" className="w-full bg-black hover:bg-neutral-800 py-6 uppercase tracking-wide">
             Iniciar sesión
           </Button>
-
+        <p className="text-center text-sm text-neutral-600">
+          ¿No tienes una cuenta?
+          <Link to ="/registro" className="text-red-600 font-semibold hover:underline"> Regístrate aquí</Link>
+        </p>
         </form>
       </div>
     </div>
   )
 }
+
+

@@ -5,6 +5,7 @@ import App from './App.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HomePage } from './pages/HomePage'
 import Login from './pages/login'
+/*import Registro from './pages/Registro'*/
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')).render(
         <Route element={<App />}>
         <Route path='/' element={<HomePage />} />
         <Route path='/login' element={<Login />} />
+        {/* <Route path='/registro' element={<Registro />} /> */}
         </Route>
       </Routes>
     </BrowserRouter>
