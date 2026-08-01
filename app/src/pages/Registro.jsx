@@ -1,19 +1,19 @@
-{/*import { useState } from 'react'
+import { useState } from 'react'
 import { Eye, EyeOff, Mail, Lock, User, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Link } from "react-router-dom"
 
+export default function Registro() {
+  // Muestra u oculta la contraseña 
+const [mostrarPassword, setMostrarPassword] = useState(false)
 
-export default function Registro (){
-    const[mostrarPassword, setMostrarPassword] = useState(false)
-    return(
-            <div className="min-h-[calc(100vh-88px)] grid grid-cols-1 md:grid-cols-2 bg-[#F5F1EA]"></div>
-        
-            
-    {/* lado izquierdo */}
-    {/*<div className="hidden md:flex flex-col items-center justify-center p-12 border-r border-black/10">
+return (
+    <div className="min-h-[calc(100vh-88px)] grid grid-cols-1 md:grid-cols-2 bg-[#F5F1EA]">
+
+      {/* lado izquierdo */}
+    <div className="hidden md:flex flex-col items-center justify-center p-12der-r border-black/10">
         <img
         src="/src/assets/casa.png"
         alt="Okinawa Tattoo Studio"
@@ -22,18 +22,16 @@ export default function Registro (){
         <p className="font-serif text-2xl mt-8">Arte que se queda contigo.</p>
         <p className="text-center text-neutral-600 mt-2">
         Tatuajes con historia.<br />Hechos con intención en Okinawa.
-        </p> 
-    </div>
-
-   {/* lado derecha */}
-   {/*} <div className="flex flex-col justify-start pt-16 px-8 md:px-20 py-12">
-
-         {/* Titulo */}
-        <p className="text-red-600 text-sm font-semibold tracking-wide mb-2">
-        Únete a nosotros
         </p>
+        </div>
+
+      {/* lado derecho  */}
+    <div className="flex flex-col justify-start pt-20x-8 md:px-20 py-12">
+
+        {/* Titulo */}
+    
         <h2 className="font-serif text-5xl mb-2">Crea tu cuenta</h2>
-        <p className="text-red-600 mb-8">y empieza a reservar tus citas.</p>   
+
 
         {/* Formulario */}
         <form className="space-y-5 max-w-md">
@@ -80,7 +78,7 @@ export default function Registro (){
             />
             </div>
         </div>
-{/*
+
           {/* Teléfono */}
         <div className="space-y-2">
             <Label htmlFor="telefono" className="uppercase text-xs tracking-wide">
@@ -146,13 +144,11 @@ export default function Registro (){
             ¿Ya tienes cuenta?{" "}
             <Link to="/login" className="text-red-600 font-semibold hover:underline">
             Inicia sesión
-            </Link>
+            </Link> 
         </p>
 
         </form>
     </div>
-
-    
     </div>
-    )
-}       
+)
+}
