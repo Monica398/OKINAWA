@@ -42,12 +42,14 @@ export function NavBar() {
                         Artistas
                     </Button>
 
-                    <Button
-                        variant="ghost"
-                        className="rounded-none px-4 font-semibold text-[#222222] hover:bg-transparent hover:text-[#c8655b]"
-                    >
-                        Tattoos
-                    </Button>
+                    <Link to="/tattoos">
+                        <Button
+                            variant="ghost"
+                            className="rounded-none px-4 font-semibold text-[#222222] hover:bg-transparent hover:text-[#c8655b]"
+                        >
+                            Tattoos
+                        </Button>
+                    </Link>
 
                     <Button
                         variant="ghost"

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { EventList } from "../components/EventList"
+import { EventList } from "../components/TattooList"
 import { getCategories } from "../services/categoryService"
 import { getEvents } from "../services/eventService"
 
