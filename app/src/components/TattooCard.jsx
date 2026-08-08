@@ -29,7 +29,12 @@ export function TattooCard({ service }) {
                 <img
                     src={`${URL}/${service.imagen}`}
                     alt={service.nombre}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className={`h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 ${service.nombre === "Septum"
+                            ? "object-top"
+                            : service.nombre === "Hélix"
+                                ? "object-[center_20%]"
+                                : "object-center"
+                        }`}
                 />
             </div>
 

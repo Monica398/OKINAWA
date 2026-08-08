@@ -1,12 +1,10 @@
-import { Search, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
 
 export function NavBar() {
     return (
         <header className="sticky top-0 z-50 border-b border-[#d8d1c7] bg-[#f4efe7]">
-            <nav className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4">
+            <nav className="mx-auto flex max-w-[1500px] items-center justify-between gap-4 px-6 py-4">
 
                 {/* Logo */}
                 <div className="flex min-w-fit items-center gap-4">
@@ -26,37 +24,80 @@ export function NavBar() {
                 </div>
 
                 {/* Menú */}
-                <div className="flex items-center gap-2">
-                    <Button
-                        variant="ghost"
-                        className="relative rounded-none px-4 font-semibold text-[#222222] hover:bg-transparent hover:text-[#c8655b]"
-                    >
-                        Inicio
-                        <span className="absolute bottom-0 left-4 right-4 h-[2px] bg-[#c8655b]" />
-                    </Button>
+                <div className="flex items-center gap-1">
 
-                    <Button
-                        variant="ghost"
-                        className="rounded-none px-4 font-semibold text-[#222222] hover:bg-transparent hover:text-[#c8655b]"
-                    >
-                        Artistas
-                    </Button>
+                    <Link to="/">
+                        <Button
+                            variant="ghost"
+                            className="relative rounded-none px-3 text-sm font-semibold text-[#222222] hover:bg-transparent hover:text-[#c8655b]"
+                        >
+                            Inicio
+                            <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-[#c8655b]" />
+                        </Button>
+                    </Link>
 
                     <Link to="/tattoos">
                         <Button
                             variant="ghost"
-                            className="rounded-none px-4 font-semibold text-[#222222] hover:bg-transparent hover:text-[#c8655b]"
+                            className="rounded-none px-3 text-sm font-semibold text-[#222222] hover:bg-transparent hover:text-[#c8655b]"
                         >
-                            Tattoos
+                            Servicios
                         </Button>
                     </Link>
 
-                    <Button
-                        variant="ghost"
-                        className="rounded-none px-4 font-semibold text-[#222222] hover:bg-transparent hover:text-[#c8655b]"
-                    >
-                        Nosotros
-                    </Button>
+                    <Link to="/adicionales">
+                        <Button
+                            variant="ghost"
+                            className="rounded-none px-3 text-sm font-semibold text-[#222222] hover:bg-transparent hover:text-[#c8655b]"
+                        >
+                            Adicionales
+                        </Button>
+                    </Link>
+
+                    <Link to="/empleados">
+                        <Button
+                            variant="ghost"
+                            className="rounded-none px-3 text-sm font-semibold text-[#222222] hover:bg-transparent hover:text-[#c8655b]"
+                        >
+                            Empleados
+                        </Button>
+                    </Link>
+
+                    <Link to="/citas">
+                        <Button
+                            variant="ghost"
+                            className="rounded-none px-3 text-sm font-semibold text-[#222222] hover:bg-transparent hover:text-[#c8655b]"
+                        >
+                            Citas
+                        </Button>
+                    </Link>
+
+                    <Link to="/horarios">
+                        <Button
+                            variant="ghost"
+                            className="rounded-none px-3 text-sm font-semibold text-[#222222] hover:bg-transparent hover:text-[#c8655b]"
+                        >
+                            Horarios
+                        </Button>
+                    </Link>
+
+                    <Link to="/restricciones">
+                        <Button
+                            variant="ghost"
+                            className="rounded-none px-3 text-sm font-semibold text-[#222222] hover:bg-transparent hover:text-[#c8655b]"
+                        >
+                            Restricciones
+                        </Button>
+                    </Link>
+
+                    <Link to="/agenda">
+                        <Button
+                            variant="ghost"
+                            className="rounded-none px-3 text-sm font-semibold text-[#222222] hover:bg-transparent hover:text-[#c8655b]"
+                        >
+                            Agenda diaria
+                        </Button>
+                    </Link>
 
                     <Button
                         variant="ghost"
@@ -66,28 +107,24 @@ export function NavBar() {
                             Registrarse
                         </Link>
                     </Button>
-                </div>
 
-                {/* Buscador y botón */}
-                <div className="flex min-w-fit items-center gap-4">
-                    <div className="relative">
-                        <Input
-                            placeholder="Buscar..."
-                            className="h-10 w-64 rounded-full border-[#555555] bg-transparent px-5 pr-11 text-[#222222] placeholder:text-[#777777] focus-visible:ring-[#c8655b]"
-                        />
-
-                        <Search className="absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-[#222222]" />
-                    </div>
+                    <Link to="/perfil">
+                        <Button
+                            variant="ghost"
+                            className="rounded-none px-3 text-sm font-semibold text-[#222222] hover:bg-transparent hover:text-[#c8655b]"
+                        >
+                            Perfil
+                        </Button>
+                    </Link>
 
                     <Button
-                        className="h-10 rounded-none bg-[#171717] px-4 text-sm font-semibold uppercase tracking-wide text-white hover:bg-[#333333]"
+                        variant="ghost"
+                        className="rounded-none px-3 text-sm font-semibold text-[#222222] hover:bg-transparent hover:text-[#c8655b]"
                     >
-                        Reservar cita
-                        {/*El plus es para que aparezcael + en reservar cita*/}
-                        <Plus className="h-4 w-4" />
+                        Cerrar sesión
                     </Button>
-                </div>
 
+                </div>
             </nav>
         </header>
     );
